@@ -33,7 +33,18 @@ class QueryBuilder {
 
     }
 
-    public function update($table, $date){
-        $sql = "UPDATE  {$table} SET event_id=:event_id, event_date=:event_date, ticket_adult_price=:ticket_adult_price, ticket_adult_quantity=:ticket_adult_quantity, ticket_kid_price=:ticket_kid_price, ticket_kid_quantity=:ticket_kid_quantity) WHERE id =:id";
+    public function update($table,$date, $id){
+        $date['id'] = $id;
+        $sql = "UPDATE {$table} SET event_id=:event_id, event_date=:event_date, ticket_adult_price=:ticket_adult_price, ticket_adult_quantity=:ticket_adult_quantity, ticket_kid_price=:ticket_kid_price, ticket_kid_quantity=:ticket_kid_quantity WHERE id=:id";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute($date);
+        dd($statement);
+
+    }
+
+    public function delete($table, $id){
+        $sql = "DELETE FROM {$table} WHERE id=:id";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute(['id' => $id]);
     }
 }
