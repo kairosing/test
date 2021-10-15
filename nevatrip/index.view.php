@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="test.php">MainPage</a>
+                    <a class="nav-link" href="/">MainPage</a>
                 </li>
             </ul>
         </div>
@@ -29,7 +29,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <a href="#" class="btn btn-success">Add Post</a>
+            <a href="create.php" class="btn btn-success">Add Post</a>
             <table class="table">
                 <thead>
                 <tr>
@@ -49,7 +49,7 @@
                 <?php foreach($users as $user):?>
                     <tr>
                         <th scope="row"><?php echo $user['id'];?></th>
-                        <td><a href="show.php?id=<?php echo $user['id'];?>"><?php echo $user['event_id'];?></td>
+                        <td><a href="show.php?id=<?php echo $user['id'];?>"><?php echo $user['event_id'];?></a></td>
                         <td><?php echo $user['event_date'];?></td>
                         <td><?php echo $user['ticket_adult_price'];?></td>
                         <td><?php echo $user['ticket_adult_quantity'];?></td>

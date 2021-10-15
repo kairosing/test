@@ -22,11 +22,10 @@ $users = $db->getOne('nevatrip', $id);
 <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <form action="update.php" method="post">
-                <input type="hidden" value="<?php echo $users['id'];?>" name="id">
+            <form action="update.php?id=<?php echo $users['id'];?>" method="post">
                 <div class="form-group">
                     <label for="">event_id</label>
-                    <input type="text" name="event_id" class="form-control" value="<?php echo $users['event_id']?>">
+                    <input type="text" name="event_id" class="form-control" value="<?php echo $users['event_id'];?>">
                 </div>
                 <div class="form-group">
                     <label for="">event_date</label>

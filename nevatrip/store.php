@@ -10,4 +10,4 @@ $db->create('nevatrip',[
    'ticket_kid_price' => $_POST['ticket_kid_price'],
    'ticket_kid_quantity' => $_POST['ticket_kid_quantity'],
 ]);
-header("Location: test.php");
+header("Location: index.php");
