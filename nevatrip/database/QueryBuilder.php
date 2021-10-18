@@ -13,7 +13,7 @@ class QueryBuilder
 
     function getAll($table)
     {
-        $sql = "SELECT * FROM {$table}";
+        $sql = "SELECT * FROM {$table} INNER JOIN order_tickets, ticket_prices";
         $statement = $this->pdo->prepare($sql);
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -36,13 +36,18 @@
                     <th scope="col">id</th>
                     <th scope="col">event_id</th>
                     <th scope="col">event_date</th>
-                    <th scope="col">ticket_adult_price</th>
-                    <th scope="col">ticket_adult_quantity</th>
-                    <th scope="col">ticket_kid_price</th>
-                    <th scope="col">ticket_kid_quantity</th>
                     <th scope="col">barcode</th>
+                    <th scope="col">user_id</th>
                     <th scope="col">equal_price</th>
                     <th scope="col">created</th>
+
+                    <th scope="col">order_id</th>
+                    <th scope="col">ticket_type_name</th>
+                    <th scope="col">amount</th>
+
+                    <th scope="col">event_id2</th>
+                    <th scope="col">ticket_type_name2</th>
+                    <th scope="col">ticket_price</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,10 +56,16 @@
                         <th scope="row"><?php echo $user['id'];?></th>
                         <td><a href="show.php?id=<?php echo $user['id'];?>"><?php echo $user['event_id'];?></a></td>
                         <td><?php echo $user['event_date'];?></td>
-                        <td><?php echo $user['ticket_adult_price'];?></td>
-                        <td><?php echo $user['ticket_adult_quantity'];?></td>
-                        <td><?php echo $user['ticket_kid_price'];?></td>
-                        <td><?php echo $user['ticket_kid_quantity'];?></td>
+                        <td><?php echo $user['barcode'];?></td>
+                        <td><?php echo $user['user_id'];?></td>
+                        <td><?php echo $user['equal_price'];?></td>
+                        <td><?php echo $user['created'];?></td>
+                        <td><?php echo $user['order_id'];?></td>
+                        <td><?php echo $user['ticket_type_name'];?></td>
+                        <td><?php echo $user['amount'];?></td>
+                        <td><?php echo $user['event_id2'];?></td>
+                        <td><?php echo $user['ticket_type_name2'];?></td>
+                        <td><?php echo $user['ticket_price'];?></td>
                         <td>
                             <a href="edit.php?id=<?php echo $user['id'];?>" class="btn btn-warning">Edit</a>
                             <a href="delete.php?id=<?php echo $user['id'];?>" class="btn btn-danger">Delete</a>

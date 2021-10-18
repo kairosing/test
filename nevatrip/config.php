@@ -2,7 +2,7 @@
 
 return [
   "database" => [
-    "database" => "get_fort",
+    "database" => "test_nevatrip",
     "username" => "root",
     "password" => "root",
     "connection" => "mysql:host=mysql"
